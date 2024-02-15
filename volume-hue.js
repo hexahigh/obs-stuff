@@ -32,7 +32,7 @@ try {
       hue =  0; // No hue change
     }*/
     hue = maxVolumeLevel * 500 - 180
-    let saturation = maxVolumeLevel * 4;
+    let saturation = (maxVolumeLevel * 4) + 0.25;
 
     console.log(`Hue: ${hue}`);
   
@@ -41,7 +41,7 @@ try {
       sourceName: "kf_logo",
       filterName: "color",
       filterSettings: {
-        //hue_shift: hue,
+        contrast: saturation,
         saturation: saturation
       },
       overlay: false
@@ -50,7 +50,7 @@ try {
       sourceName: "cavalier",
       filterName: "color",
       filterSettings: {
-        //hue_shift: hue,
+        contrast: saturation,
         saturation: saturation
       },
       overlay: false
